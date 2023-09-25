@@ -7,7 +7,7 @@ import { activeContext } from "@/context/ActiveSectionContext";
 import { useInView } from "react-intersection-observer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { sendEmail } from "@/actions/sendEmail";
+// import { sendEmail } from "@/actions/sendEmail";
 
 export type FormData = {
   emailSender: string;
@@ -58,20 +58,20 @@ export default function Contact() {
   }, [inView, Context?.setActiveSection]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      setSending(true);
-      await sendEmail(formData);
-      setFormData({
-        emailSender: "",
-        message: "",
-      });
-      notify();
-      setSending(false);
-    } catch (err : any) {
-      setSending(false);
-      Errornotify(err?.message);
-    }
+    // e.preventDefault();
+    // try {
+    //   setSending(true);
+    //   await sendEmail(formData);
+    //   setFormData({
+    //     emailSender: "",
+    //     message: "",
+    //   });
+    //   notify();
+    //   setSending(false);
+    // } catch (err : any) {
+    //   setSending(false);
+      Errornotify("Failed to send");
+    // }
   };
 
   return (
@@ -123,6 +123,7 @@ export default function Contact() {
           className="h-14 rounded-lg px-4 border dark:bg-white/20 border-black/10 placeholder:Your Email"
         />
         <textarea
+        disabled
           className="h-52 my-3 p-4 rounded-lg dark:bg-white/20 border border-black/10"
           placeholder="Your message"
           onChange={(e) =>
@@ -132,7 +133,8 @@ export default function Contact() {
           value={formData.message}
         />
         {!sending ? (
-          <button
+          <button 
+          disabled
             type="submit"
             className="group flex items-center justify-center 
           w-[8rem] h-[3rem] rounded-full bg-gray-900

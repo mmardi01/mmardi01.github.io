@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        serverActions: true,
-      },
-      target: 'experimental-serverless-trace',
-      output: {
-        basePath: '/mmardi01.github.io'
-      }
+    // experimental: {
+    //     serverActions: true,
+    //   },
+      output: 'export',
+      images: { unoptimized: true } 
 
 }
 
