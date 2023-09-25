@@ -3,7 +3,11 @@ const nextConfig = {
     experimental: {
         serverActions: true,
       },
-      output: 'standalone'  
+      target: 'experimental-serverless-trace',
+      output: {
+        basePath: '/mmardi01.github.io'
+      }
+
 }
 
 module.exports = nextConfig
