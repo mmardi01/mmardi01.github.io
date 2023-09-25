@@ -120,7 +120,7 @@ export default function Intro() {
         </a>
         <a
           target="_blank"
-          href="https://github.com/stooof01"
+          href="https://github.com/mmardi01"
           className="bg-white dark:bg-opacity-20 dark:text-white text-gray-700 rounded-full flex items-center p-4  text-[1.40em]  hover:scale-110 active:scale-105 transition border border-black/10"
         >
           <FaGithubSquare />
