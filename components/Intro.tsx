@@ -76,7 +76,7 @@ export default function Intro() {
         }}
       >
         <span className="font-bold">Hello, I'm Mustapha. </span>
-        I'm a <span className="font-bold">Front-End developer</span> & Software
+        I'm a <span className="font-bold">Web developer</span> & Software
         Engineering student. I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next js)</span>.
