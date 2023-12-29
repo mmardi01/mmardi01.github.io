@@ -22,13 +22,21 @@ export default function Navbar() {
         <ul className="flex w-full justify-around flex-wrap">
           {links.map((link, index) => (
             <li
-              onClick={() => Context?.setActiveSection(link.name)}
-              className={clsx("m-1 py-1   px-4 relative dark:hover:text-gray-300 hover:text-gray-700 transition-all", {
-                "text-gray-950 dark:text-gray-300": Context?.activeSection === link.name,
-              })}
+              className={clsx(
+                "m-1 py-1   px-4 relative dark:hover:text-gray-300 hover:text-gray-700 transition-all",
+                {
+                  "text-gray-950 dark:text-gray-300":
+                    Context?.activeSection === link.name,
+                }
+              )}
               key={index}
             >
-              <Link href={link.hash}>{link.name}</Link>
+              <Link
+                onClick={() => Context?.setActiveSection(link.name)}
+                href={link.hash}
+              >
+                {link.name}
+              </Link>
               {link.name === Context?.activeSection && (
                 <motion.span
                   layoutId="activeSection"
