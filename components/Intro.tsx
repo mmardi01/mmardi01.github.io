@@ -79,7 +79,7 @@ export default function Intro() {
         I'm a <span className="font-bold">Web developer</span> & Software
         Engineering student. I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next js)</span>.
+        <span className="underline">React (Next js) and Nodejs</span>.
       </motion.p>
       <motion.div
         className="flex flex-col sm:flex-row gap-3 justify-center text-lg font-medium"
