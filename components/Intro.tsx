@@ -39,7 +39,7 @@ export default function Intro() {
           }}
         >
           <Image
-            src="/personal.jpg"
+            src="/me.jpeg"
             alt="Mustapha Mardi"
             width="200"
             quality="95"
